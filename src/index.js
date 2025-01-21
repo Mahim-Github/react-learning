@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom/client';
 //after proper confiog we can use jsx syntax
 // like const div= <div className="text">Hello world</div> properly gonna work
 const apiData= "Hi It's currently afternoon";
- 
+//its a conditional rendering 
 const isMorning=false;
 const morningtext= "Good Morning Mahim";
 const afternoonText="Good Afternoon Akshat";
