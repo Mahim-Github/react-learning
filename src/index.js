@@ -12,9 +12,18 @@ import ReactDOM from 'react-dom/client';
 //its a conditional rendering 
 const isMorning=true;
 const morningtext= "Good Morning Mahim";
-const afternoonText="Good Afternoon Akshat";
+const afternoonText="Good Evening Mahim";
 //const div=<div className="text">{isMorning ? morningtext : afternoonText}</div>
-const morningElement=<div>{morningtext} <span>it is 8am</span></div>
+
+function handleClick(state ) {
+    console.log("I am clicked",state)
+}// kudos to the blunder i made like i have spent literally 20 min and i just have to do the value true of isMorning
+const morningElement = (
+    <div>
+        {morningtext} <span onClick={() => handleClick(morningtext)}>it is 8am</span>
+    </div>
+);
+// {morningtext} <span onClick={handleClick}>it is 8am</span>
 const afternoonElement= <div>{afternoonText} it is 10pm</div>
 const timeElement= isMorning?morningElement:afternoonElement;
 // react components are basically functions which usually returns react element
