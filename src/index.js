@@ -8,18 +8,37 @@ import ReactDOM from 'react-dom/client';
 // const div= React.createElement('div', {className: 'text'}, [child1, child2])
 //after proper confiog we can use jsx syntax
 // like const div= <div className="text">Hello world</div> properly gonna work
-const apiData= "Hi It's currently afternoon";
+// const apiData= "Hi It's currently afternoon";
 //its a conditional rendering 
-const isMorning=false;
+const isMorning=true;
 const morningtext= "Good Morning Mahim";
 const afternoonText="Good Afternoon Akshat";
 //const div=<div className="text">{isMorning ? morningtext : afternoonText}</div>
-const morningElement=<div>{morningtext} it is 8am</div>
+const morningElement=<div>{morningtext} <span>it is 8am</span></div>
 const afternoonElement= <div>{afternoonText} it is 10pm</div>
-const div= isMorning?morningElement:afternoonElement;
-console.log(div)
+const timeElement= isMorning?morningElement:afternoonElement;
+// react components are basically functions which usually returns react element
+// here i face problem regarding , the name start with small letter so i have to change its name startign with upper letter // here also we can just use fragments
+const GreetingComponent = () => <>
+        {timeElement}
+        I am inside component
+        </> 
+
+// const GreetingComponent = function(){
+//     // here i face problem regarding , the name start with small letter so i have to change its name startign with upper letter // here also we can just use fragments 
+//     return <> 
+//         {timeElement}
+//         I am inside component
+//     </>
+// }
+console.log(GreetingComponent)
 const root= ReactDOM.createRoot(document.getElementById('root'))
-root.render(div)
+root.render(<GreetingComponent/>)
+
+// console.log(greetingComponent())
+// const root= ReactDOM.createRoot(document.getElementById('root'))
+// root.render(greetingComponent())
+// if we don not render the react component it will be treated as function which can't display anything 
 // web pack is a bundler that web pack your application
 //if you want somethong a browser can react then you would need preset react
 
