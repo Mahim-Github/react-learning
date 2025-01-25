@@ -15,12 +15,16 @@ const morningtext= "Good Morning Mahim";
 const afternoonText="Good Evening Mahim";
 //const div=<div className="text">{isMorning ? morningtext : afternoonText}</div>
 
-function handleClick(state ) {
+const handleClick = (state ) =>  {
     console.log("I am clicked",state)
-}// kudos to the blunder i made like i have spent literally 20 min and i just have to do the value true of isMorning
+}//
+
+// 
+// I am just converting the below text in ejx syntax
+// // kudos to the blunder i made like i have spent literally 20 min and i just have to do the value true of isMorning
 const morningElement = (
     <div>
-        {morningtext} <span onClick={() => handleClick(morningtext)}>it is 8am</span>
+        {morningtext} <span onClick={() => handleClick(isMorning)}>it is 8am</span>
     </div>
 );
 // {morningtext} <span onClick={handleClick}>it is 8am</span>
